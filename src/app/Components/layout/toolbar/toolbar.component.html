@@ -1,0 +1,29 @@
+<mat-toolbar fxLayout="row" class="toolbar">
+    <span fxFlex  (click)="onClick()"> InnoScend</span>
+    <button mat-button class="button"  *ngFor="let item of menuItems" (click)="clicked(item.label)"  [routerLink]="['/item.label']"
+        [fxShow]="item.showOnDesktop" 
+        [fxShow.xs]="item.showOnMobile"
+        [fxShow.sm]="item.showOnTablet" >
+        <mat-icon class="mr">{{item.icon}}</mat-icon>
+        {{item.label}}
+    </button>
+    <ng-container >
+        <button mat-icon-button [matMenuTriggerFor]="dropMenu" >
+            <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #dropMenu="matMenu">
+            <ng-container *ngFor="let item of menuItems">
+                <div  [fxShow]="!item.showOnDesktop" 
+                     [fxShow.sm]="!item.showOnTablet" 
+                     [fxShow.xs]="!item.showOnMobile">
+
+                    <button class="button"  mat-menu-item (click)="clicked(item.label)"  >
+                        <mat-icon  class="mr">{{item.icon}}</mat-icon>
+                        {{item.label}}
+                    </button> 
+                    <mat-divider></mat-divider>
+                </div>
+            </ng-container>
+        </mat-menu>
+    </ng-container>
+</mat-toolbar>
