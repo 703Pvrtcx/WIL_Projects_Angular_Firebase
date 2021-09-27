@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { AboutComponent } from './Components/home/about/about.component';
 import { BlogComponent } from './Components/home/blog/blog.component';
 import { ContactComponent } from './Components/home/contact/contact.component';
 import { HomeComponent } from './Components/home/home/home.component';
 import { PortfolioComponent } from './Components/home/portfolio/portfolio.component';
+
 import { ServicesComponent } from './Components/home/services/services.component';
 import { PagerComponent } from './Components/layout/pager/pager.component';
-import { ToolbarComponent } from './Components/layout/toolbar/toolbar.component';
-import { RegisterUserComponent } from './Components/Dashboard/register-user/register-user.component';
-import { SigninUserComponent } from './Components/Dashboard/signin-user/signin-user.component';
-import { ProfileComponent } from './Components/Dashboard/profile/profile.component';
 import { DashboardComponent } from './Components/user-dashboard/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './Components/user-dashboard/forgot-password/forgot-password.component';
 import { SignInComponent } from './Components/user-dashboard/sign-in/sign-in.component';
@@ -34,8 +32,7 @@ const routes: Routes = [
     ]
   },
   // { path:'Account',component: ProfileComponent},   
-  { path:'Sign Up',component: RegisterUserComponent},
-  { path:'Login',component: SigninUserComponent},
+ 
     
   { path: 'Account', redirectTo: '/register-user', pathMatch: 'full' },
   { path: 'sign-in', component: SignInComponent },

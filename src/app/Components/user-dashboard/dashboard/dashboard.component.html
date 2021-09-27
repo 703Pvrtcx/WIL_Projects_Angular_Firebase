@@ -1,1 +1,6 @@
 <p>dashboard works!</p>
+<ul>
+  <li class="text" *ngFor="let item of items | async">
+    {{item.username}} {{item.email}}
+  </li>
+</ul>

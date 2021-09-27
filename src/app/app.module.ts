@@ -1,18 +1,17 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { AboutComponent } from './Components/home/about/about.component';
 import { ToolbarComponent } from './Components/layout/toolbar/toolbar.component';
 import { FooterComponent } from './Components/layout/footer/footer.component';
 import { PagerComponent } from './Components/layout/pager/pager.component';
 import { HomeComponent } from './Components/home/home/home.component';
 import { AngularMaterialModule } from './angular-material.module';
-import { RegisterUserComponent } from './Components/Dashboard/register-user/register-user.component';
-import { SigninUserComponent } from './Components/Dashboard/signin-user/signin-user.component';
-import { ProfileComponent } from './Components/Dashboard/profile/profile.component';
+import { ChartistModule } from 'ng-chartist';
 
 // Firebase services + enviorment module
 
@@ -27,6 +26,7 @@ import { SignInComponent } from './Components/user-dashboard/sign-in/sign-in.com
 import { VerifyEmailComponent } from './Components/user-dashboard/verify-email/verify-email.component';
 import { DashboardComponent } from './Components/user-dashboard/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './Components/user-dashboard/forgot-password/forgot-password.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -36,10 +36,8 @@ import { ForgotPasswordComponent } from './Components/user-dashboard/forgot-pass
     ToolbarComponent,
     FooterComponent,
     PagerComponent,
-    RegisterUserComponent,
-    SigninUserComponent,
-    ProfileComponent,
     HomeComponent,
+    AboutComponent,
 
     SignUpComponent,
     SignInComponent,
@@ -55,13 +53,19 @@ import { ForgotPasswordComponent } from './Components/user-dashboard/forgot-pass
     FlexLayoutModule,
     AngularMaterialModule,
     BrowserAnimationsModule,
-
+    ReactiveFormsModule,
+    FormsModule,
+  ///  NgbModule,
+     ChartistModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
 
+ 
   ],
   providers: [AuthService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+
 })
 export class AppModule { }
