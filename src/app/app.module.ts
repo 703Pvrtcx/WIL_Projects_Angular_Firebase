@@ -1,17 +1,18 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA }      from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
 import { AboutComponent } from './Components/home/about/about.component';
+
+
 import { ToolbarComponent } from './Components/layout/toolbar/toolbar.component';
 import { FooterComponent } from './Components/layout/footer/footer.component';
 import { PagerComponent } from './Components/layout/pager/pager.component';
 import { HomeComponent } from './Components/home/home/home.component';
 import { AngularMaterialModule } from './angular-material.module';
-import { ChartistModule } from 'ng-chartist';
+// import { LandingPageComponent } from './components/layout/landing-page/landing-page.component';
 
 // Firebase services + enviorment module
 
@@ -27,24 +28,24 @@ import { VerifyEmailComponent } from './Components/user-dashboard/verify-email/v
 import { DashboardComponent } from './Components/user-dashboard/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './Components/user-dashboard/forgot-password/forgot-password.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LandingPageComponent } from './Components/layout/landing-page/landing-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    
+
     ToolbarComponent,
     FooterComponent,
     PagerComponent,
     HomeComponent,
     AboutComponent,
-
     SignUpComponent,
     SignInComponent,
     VerifyEmailComponent,
     DashboardComponent,
-    ForgotPasswordComponent
-
+    ForgotPasswordComponent,
+LandingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -55,17 +56,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
-  ///  NgbModule,
-     ChartistModule,
+
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
 
- 
+
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 
 })
 export class AppModule { }

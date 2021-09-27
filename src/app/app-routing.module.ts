@@ -6,8 +6,10 @@ import { BlogComponent } from './Components/home/blog/blog.component';
 import { ContactComponent } from './Components/home/contact/contact.component';
 import { HomeComponent } from './Components/home/home/home.component';
 import { PortfolioComponent } from './Components/home/portfolio/portfolio.component';
+// import { LandingPageComponent } from './components/layout/landing-page/landing-page.component';
 
 import { ServicesComponent } from './Components/home/services/services.component';
+import { LandingPageComponent } from './Components/layout/landing-page/landing-page.component';
 import { PagerComponent } from './Components/layout/pager/pager.component';
 import { DashboardComponent } from './Components/user-dashboard/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './Components/user-dashboard/forgot-password/forgot-password.component';
@@ -16,7 +18,9 @@ import { SignUpComponent } from './Components/user-dashboard/sign-up/sign-up.com
 import { VerifyEmailComponent } from './Components/user-dashboard/verify-email/verify-email.component';
 
 const routes: Routes = [
-  { path:'',component: HomeComponent},
+
+  
+  { path:'',component: LandingPageComponent},
   { path:'Home',component: HomeComponent},
   {
     path: 'Page',

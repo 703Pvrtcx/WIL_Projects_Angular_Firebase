@@ -1,4 +1,31 @@
-<input matInput placeholder="Email" type="text" formControlName="email" #email required>
+
+    <mat-toolbar color="primary">
+        <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/sign-in">Login</button>
+            <button mat-menu-item routerLink="/register-user" > Login and continue</button>
+        </mat-menu>
+
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>My App</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>share</mat-icon>
+        </button>
+    </mat-toolbar>
+
+
+
+  
+<!-- <input matInput placeholder="Email" type="text" formControlName="email" #email required>
 <br>
 <input matInput placeholder="Password" type="password" formControlName="password" #password required>
-<button (click)="authService.SignIn(email.value, password.value)" mat-raised-button color="primary">Log in</button>
+<button (click)="authService.SignIn(email.value, password.value)" mat-raised-button color="primary">Log in</button> -->

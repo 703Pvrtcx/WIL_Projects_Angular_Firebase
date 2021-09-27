@@ -1,3 +1,12 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Create a new Acount</mat-card-title>
+    <mat-card-subtitle>subtitle</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+  
+  </mat-card-content>
+  <mat-card-actions>
 <div class="formGroup">
   <input type="email" class="formControl" placeholder="Email Address" #userEmail required>
 </div>
@@ -10,3 +19,8 @@
   <input type="button" class="btn btnPrimary" value="Sign Up"
     (click)="authService.SignUp(userEmail.value, userPwd.value)">
 </div>
+<div class="redirectToLogin">
+  <span>Go back to?<span class="redirect" routerLink="/sign-in"> Sign in</span></span>
+</div>s
+  </mat-card-actions>
+</mat-card>

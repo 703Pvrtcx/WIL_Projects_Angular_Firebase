@@ -9,9 +9,12 @@ import { AuthService } from 'src/app/Services/auth.service';
   styleUrls: ['./sign-in.component.scss']
 })
 export class SignInComponent implements OnInit {
+  
   constructor(
     public authService: AuthService, public router: Router
-  ) { 
+  ) {
+    
+  
  
   }
 
