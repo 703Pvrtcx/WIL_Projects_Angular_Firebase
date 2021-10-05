@@ -29,6 +29,7 @@ import { DashboardComponent } from './Components/user-dashboard/dashboard/dashbo
 import { ForgotPasswordComponent } from './Components/user-dashboard/forgot-password/forgot-password.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LandingPageComponent } from './Components/layout/landing-page/landing-page.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 @NgModule({
@@ -60,6 +61,12 @@ LandingPageComponent
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      // registrationStrategy: 'registerWhenStable:30000'
+    }),
 
 
   ],
