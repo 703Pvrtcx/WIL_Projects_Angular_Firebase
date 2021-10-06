@@ -1,4 +1,4 @@
-<mat-card>
+<!-- <mat-card>
   <mat-card-header>
     <mat-card-title>Create a new Acount</mat-card-title>
     <mat-card-subtitle>subtitle</mat-card-subtitle>
@@ -23,4 +23,16 @@
   <span>Go back to?<span class="redirect" routerLink="/sign-in"> Sign in</span></span>
 </div>s
   </mat-card-actions>
-</mat-card>
+</mat-card> -->
+
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <!--  <span>HOME</span> -->
+     <span><a href="/">HOME</a></span>
+     <span class="spacer"></span>
+     <a mat-button routerLink="/register-user">Register</a>
+     <a mat-button routerLink="/sign-in">Login</a>
+  </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>

@@ -46,7 +46,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     VerifyEmailComponent,
     DashboardComponent,
     ForgotPasswordComponent,
-LandingPageComponent
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

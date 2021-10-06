@@ -13,14 +13,14 @@ import { LandingPageComponent } from './Components/layout/landing-page/landing-p
 import { PagerComponent } from './Components/layout/pager/pager.component';
 import { DashboardComponent } from './Components/user-dashboard/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './Components/user-dashboard/forgot-password/forgot-password.component';
+import { ProfileComponent } from './Components/user-dashboard/profile/profile.component';
 import { SignInComponent } from './Components/user-dashboard/sign-in/sign-in.component';
 import { SignUpComponent } from './Components/user-dashboard/sign-up/sign-up.component';
 import { VerifyEmailComponent } from './Components/user-dashboard/verify-email/verify-email.component';
 
-const routes: Routes = [
-
-  
+const routes: Routes = [  
   { path:'',component: LandingPageComponent},
+  { path: 'profile', component: ProfileComponent},
   { path:'Home',component: HomeComponent},
   {
     path: 'Page',
@@ -35,9 +35,6 @@ const routes: Routes = [
       { path:'Services',component: ServicesComponent },
     ]
   },
-  // { path:'Account',component: ProfileComponent},   
- 
-    
   { path: 'Account', redirectTo: '/register-user', pathMatch: 'full' },
   { path: 'sign-in', component: SignInComponent },
   { path: 'register-user', component: SignUpComponent },
