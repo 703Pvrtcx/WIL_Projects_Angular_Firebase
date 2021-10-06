@@ -20,7 +20,6 @@ import { VerifyEmailComponent } from './Components/user-dashboard/verify-email/v
 
 const routes: Routes = [  
   { path:'',component: LandingPageComponent},
-  { path: 'profile', component: ProfileComponent},
   { path:'Home',component: HomeComponent},
   {
     path: 'Page',
@@ -39,11 +38,9 @@ const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
   { path: 'register-user', component: SignUpComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'profile', component: ProfileComponent},
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent }
-
-
-
 ];
 
 @NgModule({

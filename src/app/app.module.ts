@@ -24,6 +24,8 @@ import { environment } from '../environments/environment';
 import { AuthService } from './Services/auth.service';
 import { SignUpComponent } from './Components/user-dashboard/sign-up/sign-up.component';
 import { SignInComponent } from './Components/user-dashboard/sign-in/sign-in.component';
+import { ProfileComponent } from './Components/user-dashboard/profile/profile.component';
+
 import { VerifyEmailComponent } from './Components/user-dashboard/verify-email/verify-email.component';
 import { DashboardComponent } from './Components/user-dashboard/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './Components/user-dashboard/forgot-password/forgot-password.component';
@@ -43,6 +45,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AboutComponent,
     SignUpComponent,
     SignInComponent,
+    ProfileComponent,
     VerifyEmailComponent,
     DashboardComponent,
     ForgotPasswordComponent,
