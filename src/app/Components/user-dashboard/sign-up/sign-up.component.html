@@ -1,4 +1,53 @@
-<!-- <mat-card>
+
+
+
+
+    <mat-card>
+      <mat-card-header>
+          <mat-card-title>Create a new Account</mat-card-title>
+        </mat-card-header>
+  
+  </mat-card>
+
+  <mat-card class="card">
+    <mat-card-content>
+      <div class="card-container">
+        <mat-form-field>
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="Enter your first name" type="text" formControlName="fname" #fname required>
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Enter your last name" type="text" formControlName="lname" #lname required>
+      </mat-form-field>
+          <mat-form-field>
+              <mat-label>Enter Email</mat-label>
+              <input matInput  type="text" formControlName="email" placeholder=" Enter your Email Address" #userEmail required>
+          </mat-form-field>
+
+          <mat-form-field>
+            
+            <mat-label>New Password</mat-label>
+              <input matInput type="password" formControlName="password" placeholder="Enter new Password" #userPwd required>
+          </mat-form-field>
+
+          <mat-form-field>
+            
+            <mat-label>Confirm Password</mat-label>
+              <input matInput type="password" formControlName="confirm_password" placeholder="Enter Password Confirmation" #userPwd required>
+          </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button 
+      (click)="authService.SignUp(userEmail.value, userPwd.value)" mat-raised-button color="primary" >Create account</button>
+    </mat-card-actions>
+  </mat-card>
+
+
+
+<!-- 
+<mat-card>
   <mat-card-header>
     <mat-card-title>Create a new Acount</mat-card-title>
     <mat-card-subtitle>subtitle</mat-card-subtitle>
@@ -24,15 +73,3 @@
 </div>s
   </mat-card-actions>
 </mat-card> -->
-
-<!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <!--  <span>HOME</span> -->
-     <span><a href="/">HOME</a></span>
-     <span class="spacer"></span>
-     <a mat-button routerLink="/register-user">Register</a>
-     <a mat-button routerLink="/sign-in">Login</a>
-  </mat-toolbar-row>
-</mat-toolbar>
-<router-outlet></router-outlet>

@@ -20,6 +20,7 @@ import { VerifyEmailComponent } from './Components/user-dashboard/verify-email/v
 
 const routes: Routes = [  
   { path:'',component: LandingPageComponent},
+ // { path: 'dashboard', component: DashboardComponent },
   { path:'Home',component: HomeComponent},
   {
     path: 'Page',
