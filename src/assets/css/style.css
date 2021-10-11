@@ -32,11 +32,13 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 .back-to-top {
   position: fixed;
-  visibility: hidden;
-  opacity: 0;
+  /* visibility: hidden; */
+  /* opacity: 0; */
   right: 15px;
+  /* position:absolute; */
   bottom: 15px;
-  z-index: 996;
+  /* z-index: 996; */
+  
   background: #0563bb;
   width: 40px;
   height: 40px;
@@ -45,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .back-to-top i {
   font-size: 28px;
-  color: #fff;
+  color: rgb(242, 242, 242);
   line-height: 0;
 }
 .back-to-top:hover {
@@ -255,7 +257,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.583);
   position: absolute;
   bottom: 0;
   top: 0;
