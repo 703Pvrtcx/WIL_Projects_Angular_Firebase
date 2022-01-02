@@ -70,8 +70,6 @@ export class AuthService {
        this.router.navigate(['verify-email-address']);
      })
    }
-
-
   // Reset Forggot password
   ForgotPassword(passwordResetEmail: string) {
     return this.afAuth.sendPasswordResetEmail(passwordResetEmail)
@@ -98,17 +96,18 @@ export class AuthService {
   // }
 
   // Auth logic to run auth providers
-  // AuthLogin(provider) {
-  //   return this.afAuth.signInWithPopup(provider)
-  //   .then((result) => {
-  //      this.ngZone.run(() => {
-  //         this.router.navigate(['dashboard']);
-  //       })
-  //     this.SetUserData(result.user);
-  //   }).catch((error) => {
-  //     window.alert(error)
-  //   })
-  // }
+  AuthLogin(provider: firebase.default.auth.AuthProvider) {
+    return this.afAuth.signInWithPopup(provider)
+    .then((result) => {
+       this.ngZone.run(() => {
+          this.router.navigate(['dashboard']);
+        
+      // this.SetUserData(result.user);
+        })
+    }).catch((error) => {
+      window.alert(error)
+    })
+  }
 
   /* Setting up user data when sign in with username/password, 
   sign up with username/password and sign in with social auth  
